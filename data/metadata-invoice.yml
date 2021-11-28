@@ -1,0 +1,261 @@
+# ===
+# Metadata field definitions of invoices
+# [TODO] Define the gobal settings _dataPrefix and _csvPrefix correctly
+# ===
+
+
+# Globals
+_group: cdev.invoice
+_prefix: cdev_invoice_
+_dataPrefix: MAIN_MODULE_MANAGEMENT/customers/cdev.invoice/Data
+_csvPrefix: /agorum/roi/customer/cdev.invoice/csv/
+_encoding: UTF-8
+
+
+# Defaults
+_default:
+  # string, long, double, date, boolean
+  type: string
+  # inherited, notInherited, builtIn
+  kind: notInherited
+
+
+# Invoice Record Header
+number:
+  displayName: 'Rechnungsnummer'
+date:
+  displayName: 'Rechnungsdatum'
+  type: date
+referenced_number:
+  displayName: 'Referenznummer (z.B. bei Gutschrift die Rechnungsnummer)'
+is_credit_note:
+  displayName: 'Ist eine Gutschrift'
+  type: boolean
+direction:
+  displayName: 'Richtung (Eingang oder Ausgang)'
+currency:
+  displayName: 'Währung'
+
+
+# Invoice Supplier Information
+supplier_number:
+  displayName: 'Lieferantennummer'
+supplier_name:
+  displayName: 'Lieferantenname'
+supplier_street:
+  displayName: 'Straße'
+supplier_house_number:
+  displayName: 'Hausnummer'
+supplier_zip:
+  displayName: 'PLZ'
+supplier_city:
+  displayName: 'Stadt'
+supplier_country:
+  displayName: 'Land'
+supplier_care_of:
+  displayName: 'Wohnhaft bei'
+supplier_attn:
+  displayName: 'Zu Händen an'
+supplier_phone:
+  displayName: 'Telefon'
+supplier_mobile:
+  displayName: 'Mobiltelefon'
+supplier_fax:
+  displayName: 'Fax'
+supplier_mail:
+  displayName: 'E-Mail'
+supplier_url:
+  displayName: 'Webseite'
+supplier_post_office:
+  displayName: 'Postfach'
+supplier_vat_id:
+  displayName: 'Umsatzsteuer-ID'
+
+
+# Invoice Customer Information
+customer_number:
+  displayName: 'Kundennummer'
+customer_name:
+  displayName: 'Kundenname'
+customer_street:
+  displayName: 'Straße'
+customer_house_number:
+  displayName: 'Hausnummer'
+customer_zip:
+  displayName: 'PLZ'
+customer_city:
+  displayName: 'Stadt'
+customer_country:
+  displayName: 'Land'
+customer_care_of:
+  displayName: 'Wohnhaft bei'
+customer_attn:
+  displayName: 'Zu Händen an'
+customer_phone:
+  displayName: 'Telefon'
+customer_mobile:
+  displayName: 'Mobiltelefon'
+customer_fax:
+  displayName: 'Fax'
+customer_mail:
+  displayName: 'E-Mail'
+customer_url:
+  displayName: 'Webseite'
+customer_post_office:
+  displayName: 'Postfach'
+customer_vat_id:
+  displayName: 'Umsatzsteuer-ID'
+
+
+# Invoice Order Information
+order_number:
+  displayName: 'Bestellnummer'
+order_date:
+  displayName: 'Bestelldatum'
+  type: date
+
+
+# Invoice Delivery Information
+delivery_note_number:
+  displayName: 'Lieferscheinnummer'
+delivery_conditions:
+  displayName: 'Lieferbedingungen'
+delivery_method:
+  displayName: 'Liefermethode'
+delivery_date:
+  displayName: 'Lieferdatum'
+  type: date
+
+
+# Invoice Servie Information
+service_date:
+  displayName: 'Leistungsdatum (Ende)'
+  type: date
+service_start:
+  displayName: 'Leistungsbeginn'
+  type: date
+
+
+# Invoice Shipping Information
+shipping_date:
+  displayName: 'Versanddatum'
+  type: date
+
+
+# Invoice Payment Information
+payment_due_date:
+  displayName: 'Zahlungsziel'
+  type: date
+payment_discount_due_date:
+  displayName: 'Zahlungsziel für Skonto'
+  type: date
+payment_discount_amount:
+  displayName: 'Skontobetrag (Abzug vom Zahlbetrag)'
+  type: double
+payment_discount_rate:
+  displayName: 'Skontosatz (Prozentsatz)'
+  type: double
+payment_method:
+  displayName: 'Zahlmethode'
+payment_status:
+  displayName: 'Zahlstatus (bezahlt etc.)'
+payment_date:
+  displayName: 'Bezahldatum'
+  type: date
+payment_iban:
+  displayName: 'IBAN'
+payment_bic:
+  displayName: 'BIC'
+payment_bank:
+  displayName: 'Bank'
+
+
+# Invoice Item List
+item_list:
+  displayName: 'Positionen'
+  list:
+    number:
+      displayName: 'Position'
+    description:
+      displayName: 'Beschreibung'
+    quantity:
+      displayName: 'Menge'
+      type: double
+    unit:
+      displayName: 'Einheit'
+    cost_center:
+      displayName: 'Kostenstelle'
+    contra_account:
+      displayName: 'Gegenkonto'
+    order_number:
+      displayName: 'Bestellnummer'
+    order_date:
+      displayName: 'Bestelldatum'
+      type: date
+    net_price:
+      displayName: 'Einzelpreis netto'
+      type: double
+    gross_price:
+      displayName: 'Einzelpreis brutto'
+      type: double
+    net_amount:
+      displayName: 'Nettobetrag'
+      type: double
+    gross_amount:
+      displayName: 'Bruttobetrag'
+      type: double
+    tax_amount:
+      displayName: 'Steuerbetrag'
+      type: double
+    tax_rate:
+      displayName: 'Steuersatz'
+      type: double
+    discount_amount:
+      displayName: 'Rabatt Betrag'
+      type: double
+    discount_rate:
+      displayName: 'Rabatt Prozent'
+      type: double
+    add_amount:
+      displayName: 'Zuschlag Betrag'
+      type: double
+    add_rate:
+      displayName: 'Zuschlag Prozent'
+      type: double
+    delivery_note_number:
+      displayName: 'Lieferscheinnummer'
+
+
+# Invoice Totals
+total_net_amount:
+  displayName: 'Summe Nettobetrag'
+  type: double
+total_gross_amount:
+  displayName: 'Summe Bruttobetrag'
+  type: double
+total_tax_amount:
+  displayName: 'Summe Steuerbetrag'
+  type: double
+total_tax_rate:
+  displayName: 'Steuersatz'
+  type: double
+total_tax_exemption_notice:
+  displayName: 'Hinweis zur Steuerbefreiung'
+total_discount_amount:
+  displayName: 'Rabattierter Betrag'
+  type: double
+total_discount_rate:
+  displayName: 'Rabatt in Prozent'
+  type: double
+total_discountable_amount:
+  displayName: "Rabattierfähiger Betrag (je nach Fall brutto oder netto)"
+  type: double
+total_discounted_amount:
+  displayName: 'Betrag inklusive Rabatt (Zahlbetrag)'
+  type: double
+total_add_amount:
+  displayName: 'Zuschlag'
+  type: double
+total_add_rate:
+  displayName: 'Zuschlag in Prozent'
+  type: double

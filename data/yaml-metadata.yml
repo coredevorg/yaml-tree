@@ -1,0 +1,58 @@
+typedef:
+  type: &type
+    type: string
+    depends: [ any ]
+    data:
+      - string
+      - long
+      - double
+      - date
+      - boolean
+    default: string
+  kind: &kind
+    type: string
+    depends: [ any ]
+    data:
+      - inhertited
+      - notInheritied
+      - buildIn
+    default: notInherited
+  restricted: &restricted
+    type: boolean
+    depends: [ any ]
+    default: false
+
+keys:
+  root:
+    - _group:
+        type: string
+        default:
+    - _prefix:
+        type: string
+        default:
+    - _default:
+        depends: [ root ]
+        type: object
+        items:
+          - type: *type
+          - kind: *kind
+          - restricted: *restricted
+  any:
+    - displayName:
+        type: string
+    - format:
+        type: string
+    - readOnly:
+        type: boolean
+    - type: *type
+    - kind: *kind
+    - restricted: *restricted
+    - optional:
+        type: boolean
+        default: true
+  data:
+    - multi:
+        type: boolean
+        depends: [ any ]
+        default: false
+

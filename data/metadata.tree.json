@@ -1,0 +1,1063 @@
+{
+  "id": "root",
+  "text": "metadata-invoice.yml",
+  "expanded": true,
+  "items": [
+    {
+      "id": "_group",
+      "text": "_group"
+    },
+    {
+      "id": "_prefix",
+      "text": "_prefix"
+    },
+    {
+      "id": "_dataPrefix",
+      "text": "_dataPrefix"
+    },
+    {
+      "id": "_csvPrefix",
+      "text": "_csvPrefix"
+    },
+    {
+      "id": "_encoding",
+      "text": "_encoding"
+    },
+    {
+      "id": "_default",
+      "text": "_default",
+      "items": [
+        {
+          "id": "_default.type",
+          "text": "type"
+        },
+        {
+          "id": "_default.kind",
+          "text": "kind"
+        }
+      ]
+    },
+    {
+      "id": "number",
+      "text": "Rechnungsnummer [number]",
+      "items": [
+        {
+          "id": "number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "date",
+      "text": "Rechnungsdatum [date]",
+      "items": [
+        {
+          "id": "date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "referenced_number",
+      "text": "Referenznummer (z.B. bei Gutschrift die Rechnungsnummer) [referenced_number]",
+      "items": [
+        {
+          "id": "referenced_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "is_credit_note",
+      "text": "Ist eine Gutschrift [is_credit_note]",
+      "items": [
+        {
+          "id": "is_credit_note.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "is_credit_note.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "direction",
+      "text": "Richtung (Eingang oder Ausgang) [direction]",
+      "items": [
+        {
+          "id": "direction.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "currency",
+      "text": "Währung [currency]",
+      "items": [
+        {
+          "id": "currency.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_number",
+      "text": "Lieferantennummer [supplier_number]",
+      "items": [
+        {
+          "id": "supplier_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_name",
+      "text": "Lieferantenname [supplier_name]",
+      "items": [
+        {
+          "id": "supplier_name.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_street",
+      "text": "Straße [supplier_street]",
+      "items": [
+        {
+          "id": "supplier_street.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_house_number",
+      "text": "Hausnummer [supplier_house_number]",
+      "items": [
+        {
+          "id": "supplier_house_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_zip",
+      "text": "PLZ [supplier_zip]",
+      "items": [
+        {
+          "id": "supplier_zip.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_city",
+      "text": "Stadt [supplier_city]",
+      "items": [
+        {
+          "id": "supplier_city.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_country",
+      "text": "Land [supplier_country]",
+      "items": [
+        {
+          "id": "supplier_country.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_care_of",
+      "text": "Wohnhaft bei [supplier_care_of]",
+      "items": [
+        {
+          "id": "supplier_care_of.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_attn",
+      "text": "Zu Händen an [supplier_attn]",
+      "items": [
+        {
+          "id": "supplier_attn.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_phone",
+      "text": "Telefon [supplier_phone]",
+      "items": [
+        {
+          "id": "supplier_phone.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_mobile",
+      "text": "Mobiltelefon [supplier_mobile]",
+      "items": [
+        {
+          "id": "supplier_mobile.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_fax",
+      "text": "Fax [supplier_fax]",
+      "items": [
+        {
+          "id": "supplier_fax.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_mail",
+      "text": "E-Mail [supplier_mail]",
+      "items": [
+        {
+          "id": "supplier_mail.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_url",
+      "text": "Webseite [supplier_url]",
+      "items": [
+        {
+          "id": "supplier_url.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_post_office",
+      "text": "Postfach [supplier_post_office]",
+      "items": [
+        {
+          "id": "supplier_post_office.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "supplier_vat_id",
+      "text": "Umsatzsteuer-ID [supplier_vat_id]",
+      "items": [
+        {
+          "id": "supplier_vat_id.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_number",
+      "text": "Kundennummer [customer_number]",
+      "items": [
+        {
+          "id": "customer_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_name",
+      "text": "Kundenname [customer_name]",
+      "items": [
+        {
+          "id": "customer_name.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_street",
+      "text": "Straße [customer_street]",
+      "items": [
+        {
+          "id": "customer_street.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_house_number",
+      "text": "Hausnummer [customer_house_number]",
+      "items": [
+        {
+          "id": "customer_house_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_zip",
+      "text": "PLZ [customer_zip]",
+      "items": [
+        {
+          "id": "customer_zip.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_city",
+      "text": "Stadt [customer_city]",
+      "items": [
+        {
+          "id": "customer_city.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_country",
+      "text": "Land [customer_country]",
+      "items": [
+        {
+          "id": "customer_country.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_care_of",
+      "text": "Wohnhaft bei [customer_care_of]",
+      "items": [
+        {
+          "id": "customer_care_of.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_attn",
+      "text": "Zu Händen an [customer_attn]",
+      "items": [
+        {
+          "id": "customer_attn.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_phone",
+      "text": "Telefon [customer_phone]",
+      "items": [
+        {
+          "id": "customer_phone.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_mobile",
+      "text": "Mobiltelefon [customer_mobile]",
+      "items": [
+        {
+          "id": "customer_mobile.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_fax",
+      "text": "Fax [customer_fax]",
+      "items": [
+        {
+          "id": "customer_fax.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_mail",
+      "text": "E-Mail [customer_mail]",
+      "items": [
+        {
+          "id": "customer_mail.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_url",
+      "text": "Webseite [customer_url]",
+      "items": [
+        {
+          "id": "customer_url.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_post_office",
+      "text": "Postfach [customer_post_office]",
+      "items": [
+        {
+          "id": "customer_post_office.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "customer_vat_id",
+      "text": "Umsatzsteuer-ID [customer_vat_id]",
+      "items": [
+        {
+          "id": "customer_vat_id.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "order_number",
+      "text": "Bestellnummer [order_number]",
+      "items": [
+        {
+          "id": "order_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "order_date",
+      "text": "Bestelldatum [order_date]",
+      "items": [
+        {
+          "id": "order_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "order_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "delivery_note_number",
+      "text": "Lieferscheinnummer [delivery_note_number]",
+      "items": [
+        {
+          "id": "delivery_note_number.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "delivery_conditions",
+      "text": "Lieferbedingungen [delivery_conditions]",
+      "items": [
+        {
+          "id": "delivery_conditions.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "delivery_method",
+      "text": "Liefermethode [delivery_method]",
+      "items": [
+        {
+          "id": "delivery_method.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "delivery_date",
+      "text": "Lieferdatum [delivery_date]",
+      "items": [
+        {
+          "id": "delivery_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "delivery_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "service_date",
+      "text": "Leistungsdatum (Ende) [service_date]",
+      "items": [
+        {
+          "id": "service_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "service_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "service_start",
+      "text": "Leistungsbeginn [service_start]",
+      "items": [
+        {
+          "id": "service_start.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "service_start.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "shipping_date",
+      "text": "Versanddatum [shipping_date]",
+      "items": [
+        {
+          "id": "shipping_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "shipping_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_due_date",
+      "text": "Zahlungsziel [payment_due_date]",
+      "items": [
+        {
+          "id": "payment_due_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "payment_due_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_discount_due_date",
+      "text": "Zahlungsziel für Skonto [payment_discount_due_date]",
+      "items": [
+        {
+          "id": "payment_discount_due_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "payment_discount_due_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_discount_amount",
+      "text": "Skontobetrag (Abzug vom Zahlbetrag) [payment_discount_amount]",
+      "items": [
+        {
+          "id": "payment_discount_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "payment_discount_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_discount_rate",
+      "text": "Skontosatz (Prozentsatz) [payment_discount_rate]",
+      "items": [
+        {
+          "id": "payment_discount_rate.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "payment_discount_rate.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_method",
+      "text": "Zahlmethode [payment_method]",
+      "items": [
+        {
+          "id": "payment_method.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "payment_status",
+      "text": "Zahlstatus (bezahlt etc.) [payment_status]",
+      "items": [
+        {
+          "id": "payment_status.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "payment_date",
+      "text": "Bezahldatum [payment_date]",
+      "items": [
+        {
+          "id": "payment_date.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "payment_date.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "payment_iban",
+      "text": "IBAN [payment_iban]",
+      "items": [
+        {
+          "id": "payment_iban.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "payment_bic",
+      "text": "BIC [payment_bic]",
+      "items": [
+        {
+          "id": "payment_bic.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "payment_bank",
+      "text": "Bank [payment_bank]",
+      "items": [
+        {
+          "id": "payment_bank.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "item_list",
+      "text": "Positionen [item_list]",
+      "items": [
+        {
+          "id": "item_list.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "item_list.list",
+          "text": "list",
+          "items": [
+            {
+              "id": "item_list.list.number",
+              "text": "Position [number]",
+              "items": [
+                {
+                  "id": "item_list.list.number.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.description",
+              "text": "Beschreibung [description]",
+              "items": [
+                {
+                  "id": "item_list.list.description.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.quantity",
+              "text": "Menge [quantity]",
+              "items": [
+                {
+                  "id": "item_list.list.quantity.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.quantity.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.unit",
+              "text": "Einheit [unit]",
+              "items": [
+                {
+                  "id": "item_list.list.unit.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.cost_center",
+              "text": "Kostenstelle [cost_center]",
+              "items": [
+                {
+                  "id": "item_list.list.cost_center.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.contra_account",
+              "text": "Gegenkonto [contra_account]",
+              "items": [
+                {
+                  "id": "item_list.list.contra_account.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.order_number",
+              "text": "Bestellnummer [order_number]",
+              "items": [
+                {
+                  "id": "item_list.list.order_number.displayName",
+                  "text": "displayName"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.order_date",
+              "text": "Bestelldatum [order_date]",
+              "items": [
+                {
+                  "id": "item_list.list.order_date.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.order_date.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.net_price",
+              "text": "Einzelpreis netto [net_price]",
+              "items": [
+                {
+                  "id": "item_list.list.net_price.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.net_price.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.gross_price",
+              "text": "Einzelpreis brutto [gross_price]",
+              "items": [
+                {
+                  "id": "item_list.list.gross_price.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.gross_price.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.net_amount",
+              "text": "Nettobetrag [net_amount]",
+              "items": [
+                {
+                  "id": "item_list.list.net_amount.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.net_amount.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.gross_amount",
+              "text": "Bruttobetrag [gross_amount]",
+              "items": [
+                {
+                  "id": "item_list.list.gross_amount.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.gross_amount.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.tax_amount",
+              "text": "Steuerbetrag [tax_amount]",
+              "items": [
+                {
+                  "id": "item_list.list.tax_amount.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.tax_amount.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.tax_rate",
+              "text": "Steuersatz [tax_rate]",
+              "items": [
+                {
+                  "id": "item_list.list.tax_rate.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.tax_rate.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.discount_amount",
+              "text": "Rabatt Betrag [discount_amount]",
+              "items": [
+                {
+                  "id": "item_list.list.discount_amount.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.discount_amount.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.discount_rate",
+              "text": "Rabatt Prozent [discount_rate]",
+              "items": [
+                {
+                  "id": "item_list.list.discount_rate.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.discount_rate.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.add_amount",
+              "text": "Zuschlag Betrag [add_amount]",
+              "items": [
+                {
+                  "id": "item_list.list.add_amount.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.add_amount.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.add_rate",
+              "text": "Zuschlag Prozent [add_rate]",
+              "items": [
+                {
+                  "id": "item_list.list.add_rate.displayName",
+                  "text": "displayName"
+                },
+                {
+                  "id": "item_list.list.add_rate.type",
+                  "text": "type"
+                }
+              ]
+            },
+            {
+              "id": "item_list.list.delivery_note_number",
+              "text": "Lieferscheinnummer [delivery_note_number]",
+              "items": [
+                {
+                  "id": "item_list.list.delivery_note_number.displayName",
+                  "text": "displayName"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "total_net_amount",
+      "text": "Summe Nettobetrag [total_net_amount]",
+      "items": [
+        {
+          "id": "total_net_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_net_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_gross_amount",
+      "text": "Summe Bruttobetrag [total_gross_amount]",
+      "items": [
+        {
+          "id": "total_gross_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_gross_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_tax_amount",
+      "text": "Summe Steuerbetrag [total_tax_amount]",
+      "items": [
+        {
+          "id": "total_tax_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_tax_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_tax_rate",
+      "text": "Steuersatz [total_tax_rate]",
+      "items": [
+        {
+          "id": "total_tax_rate.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_tax_rate.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_tax_exemption_notice",
+      "text": "Hinweis zur Steuerbefreiung [total_tax_exemption_notice]",
+      "items": [
+        {
+          "id": "total_tax_exemption_notice.displayName",
+          "text": "displayName"
+        }
+      ]
+    },
+    {
+      "id": "total_discount_amount",
+      "text": "Rabattierter Betrag [total_discount_amount]",
+      "items": [
+        {
+          "id": "total_discount_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_discount_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_discount_rate",
+      "text": "Rabatt in Prozent [total_discount_rate]",
+      "items": [
+        {
+          "id": "total_discount_rate.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_discount_rate.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_discountable_amount",
+      "text": "Rabattierfähiger Betrag (je nach Fall brutto oder netto) [total_discountable_amount]",
+      "items": [
+        {
+          "id": "total_discountable_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_discountable_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_discounted_amount",
+      "text": "Betrag inklusive Rabatt (Zahlbetrag) [total_discounted_amount]",
+      "items": [
+        {
+          "id": "total_discounted_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_discounted_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_add_amount",
+      "text": "Zuschlag [total_add_amount]",
+      "items": [
+        {
+          "id": "total_add_amount.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_add_amount.type",
+          "text": "type"
+        }
+      ]
+    },
+    {
+      "id": "total_add_rate",
+      "text": "Zuschlag in Prozent [total_add_rate]",
+      "items": [
+        {
+          "id": "total_add_rate.displayName",
+          "text": "displayName"
+        },
+        {
+          "id": "total_add_rate.type",
+          "text": "type"
+        }
+      ]
+    }
+  ]
+}

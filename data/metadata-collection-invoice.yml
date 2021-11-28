@@ -1,0 +1,419 @@
+# ===
+# Metadata collection definitions for invoices
+# [TODO] In some cases, validation of required information if another information is not present
+#   e.g. (total_tax_exemption_notice XOR (total_tax_rate AND total_tax_amount))
+# [TODO] If the gross amount is lower than 250,- EUR, some information is not required.
+# [TODO] In some cases, more information is mandatory for invoices for services from abroad.
+#   e.g. customer's VAT ID
+#
+# Types of invoices:
+# - general         Common meta information
+# - small_amount    Supplier information, date, items and quantity, gross amount, (tax rate or tax exemption notice)
+# - all_inclusive   All meta information
+#
+# Planned types of invoices:
+# - credit_note     Customer is the creator, Invoice is marked as credit-note
+# - intra_community Delivery or service EU-wide, VAT ID of both parties is mandatory
+# - partial         Partial invoice to clear a sub-set of items of an order
+# - final           Final invoice to clear the remaining items of an order with links to the partial invoices
+# - down_payment    Used to clear a part of the total amout of the order
+# ===
+
+# _group: Configuration Name
+_group: cdev.invoice
+
+# _prefix: Configuration Prefix
+_prefix: cdev_invoice_
+
+# default settings
+_default:
+  type: string
+  optional: true
+
+general_incoming:
+
+  displayName: Eingangsrechnung mit gängigen Informationen
+
+  usage:
+    - docform
+    - form
+    - acic
+    - mapping_source
+    - mapping_target
+
+  mapping_source:
+    mapping:
+      displayName: '${displayName} [${name}]'
+      duplicates: true
+      prefix: 'cdev_invoice_'
+
+  mapping_target:
+    mapping:
+      displayName: '${displayName} [${name}]'
+      duplicates: false
+      dependencies: true
+      prefix: 'cdev_invoice_'
+      validations:
+        - mandatory
+      transformation: 'ObjectToObject'
+
+  items:
+    # Header Information
+    - number:
+      tooltip: 'Rechnungsnummer'
+      help: 'Die Rechnungsnummer des Beleges'
+      mapping_target:
+        mapping:
+          mandatory: true
+    - date:
+      tooltip: 'Belegdatum der Rechnung'
+      help: 'Belegdatum der Rechnung'
+      mapping_target:
+        mapping:
+          mandatory: true
+    - is_credit_note:
+    - direction: 'in'
+    - currency: 'EUR'
+    # Supplier Information
+    - supplier_name:
+      tooltip: "Name des Lieferanten"
+      help: "Lieferant"
+      mapping_target:
+        mapping:
+          mandatory: false
+    - supplier_street:
+      mapping_target:
+        mapping:
+          depends: supplier_name
+    - supplier_house_number:
+      mapping_target:
+        mapping:
+          depends: supplier_name
+    - supplier_zip:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_city:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_country:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_vat_id:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    # Invoice Delivery Information
+    - delivery_date:
+    # Invoice Servie Information
+    - service_date:
+    # Invoice Payment Information
+    - payment_discount_amount:
+    # Invoice Totals
+    - total_net_amount:
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_discount_amount:
+    - total_tax_rate:
+    - total_tax_amount:
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_add_amount:
+    - total_gross_amount:
+      tooltip: 'Gesamt Bruttobetrag'
+      help: 'Gesamtbetrag der Rechnung inkl. Steuern'
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_tax_exemption_notice:
+    # Invoice Item List
+    - item_list:
+      items:
+        - description:
+        - quantity:
+        - unit:
+        - net_price:
+        - gross_price:
+        - net_amount:
+        - gross_amount:
+        - tax_amount:
+        - tax_rate:
+
+# General Invoice Information
+# Incluces the mandatory information of invoices only
+general:
+
+  displayName: Rechnung mit gängigen Informationen
+
+  usage:
+    - docform
+    - form
+    - acic
+    - mapping_source
+    - mapping_target
+
+  mapping_source:
+    mapping:
+      displayName: '${displayName} [${name}]'
+      duplicates: true
+      dependencies: false
+      prefix: 'cdev_invoice_'
+
+  mapping_target:
+    mapping:
+      displayName: '${displayName} [${name}]'
+      duplicates: false
+      dependencies: true
+      prefix: 'cdev_invoice_'
+      transformation: 'ObjectToObject'
+
+  items:
+    # Header Information
+    - number:
+      mapping_target:
+        mapping:
+          mandatory: true
+          tooltip: 'Rechnungsnummer'
+          help: 'Die Rechnungsnummer des Beleges'
+    - date:
+      mapping_target:
+        mapping:
+          tooltip: 'Belegdatum der Rechnung'
+          help: 'Belegdatum der Rechnung'
+          mandatory: true
+    - is_credit_note: false
+    - direction:
+    - currency: EUR
+    # Supplier Information
+    - supplier_name:
+      mapping_target:
+        mapping:
+          mandatory: true
+          tooltip: "Name des Lieferanten"
+          help: "Lieferant"
+    - supplier_street:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_house_number:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_zip:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_city:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_country:
+      mapping_target:
+        mapping:
+          depends:
+            - supplier_name
+    - supplier_vat_id:
+    # Customer Information
+    - customer_name:
+    - customer_street:
+    - customer_house_number:
+    - customer_zip:
+    - customer_city:
+    - customer_country:
+    # Invoice Delivery Information
+    - delivery_date:
+    # Invoice Servie Information
+    - service_date:
+    # Invoice Payment Information
+    - payment_discount_amount:
+    # Invoice Totals
+    - total_net_amount:
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_discount_amount:
+    - total_tax_rate:
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_tax_amount:
+      mapping_target:
+        mapping:
+          mandatory: true
+    - total_add_amount:
+    - total_gross_amount:
+      mapping_target:
+        mapping:
+          tooltip: 'Gesamt Bruttobetrag'
+          help: 'Gesamtbetrag der Rechnung inkl. Steuern'
+          mandatory: true
+    - total_tax_exemption_notice:
+    # Invoice Item List
+    - item_list:
+      items:
+        - description:
+        - quantity:
+        - unit:
+        - net_price:
+        - gross_price:
+        - net_amount:
+        - gross_amount:
+        - tax_amount:
+        - tax_rate:
+
+# Small-amout Invoice
+# The amout of the invoice is equal or less than 250,- EUR
+# Is not valid for foreign or intra-community shipments
+small_amount:
+
+  displayName: Kleinbetragsrechnungen
+  name: cdev_invoice_small_amount
+
+  usage:
+    - docform
+    - form
+    - mapping_source
+
+  items:
+    # Header Information
+    - date:
+    - currency:
+    # Supplier Information
+    - supplier_name:
+    - supplier_street:
+    - supplier_house_number:
+    - supplier_zip:
+    - supplier_city:
+    - supplier_country:
+    # Invoice Totals
+    - total_tax_rate:
+    - total_gross_amount:
+    - total_tax_exemption_notice:
+    # Invoice Item List
+    - item_list:
+      items:
+        - description:
+        - quantity:
+        - unit:
+
+
+# All available invoice information
+all_inclusive:
+
+  displayName: Rechnung mit allen Angaben
+  name: cdev_invoice_all_inclusive
+
+  usage:
+    - mapping_source
+  items:
+    # Incoice Record Header
+    - number:
+    - date:
+    - referenced_invoice_number:
+    - is_credit_note:
+    - direction:
+    - currency:
+    # Incoice Supplier Information
+    - supplier_number:
+    - supplier_name:
+    - supplier_street:
+    - supplier_house_number:
+    - supplier_zip:
+    - supplier_city:
+    - supplier_country:
+    - supplier_care_of:
+    - supplier_attn:
+    - supplier_phone:
+    - supplier_mobile:
+    - supplier_fax:
+    - supplier_mail:
+    - supplier_url:
+    - supplier_post_office:
+    - supplier_vat_id:
+    # Invoice Customer Information
+    - customer_number:
+    - customer_name:
+    - customer_street:
+    - customer_house_number:
+    - customer_zip:
+    - customer_city:
+    - customer_country:
+    - customer_care_of:
+    - customer_attn:
+    - customer_phone:
+    - customer_mobile:
+    - customer_fax:
+    - customer_mail:
+    - customer_url:
+    - customer_post_office:
+    - customer_vat_id:
+    # Invoice Order Information
+    - order_number:
+    - order_date:
+    # Invoice Delivery Information
+    - delivery_note_number:
+    - delivery_conditions:
+    - delivery_method:
+    - delivery_date:
+    # Invoice Servie Information
+    - service_date:
+    - service_start:
+    # Invoice Shipping Information
+    - shipping_date:
+    # Invoice Payment Information
+    - payment_due_date:
+    - payment_discount_due_date:
+    - payment_discount_amount:
+    - payment_discount_rate:
+    - payment_method:
+    - payment_status:
+    - payment_date:
+    - payment_iban:
+    - payment_bic:
+    - payment_bank:
+    # Invoice Totals
+    - total_net_amount:
+    - total_gross_amount:
+    - total_tax_amount:
+    - total_tax_rate:
+    - total_tax_exemption_notice:
+    - total_discount_amount:
+    - total_discount_rate:
+    - total_discountable_amount:
+    - total_discounted_amount:
+    - total_add_amount:
+    - total_add_rate:
+    # Invoice Item List
+    - item_list:
+      items:
+        - number:
+        - description:
+        - quantity:
+        - unit:
+        - cost_center:
+        - contra_account:
+        - order_number:
+        - order_date:
+        - net_price:
+        - gross_price:
+        - net_amount:
+        - gross_amount:
+        - tax_amount:
+        - tax_rate:
+        - discount_amount:
+        - discount_rate:
+        - add_amount:
+        - add_rate:
+        - delivery_note_number:
