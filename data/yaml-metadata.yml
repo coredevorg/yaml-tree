@@ -1,4 +1,5 @@
-typedef:
+typedev:
+
   type: &type
     type: string
     depends: [ any ]
@@ -9,6 +10,7 @@ typedef:
       - date
       - boolean
     default: string
+
   kind: &kind
     type: string
     depends: [ any ]
@@ -17,27 +19,32 @@ typedef:
       - notInheritied
       - buildIn
     default: notInherited
+
   restricted: &restricted
     type: boolean
     depends: [ any ]
     default: false
 
 keys:
+
   root:
     - _group:
+        optional: false
         type: string
         default:
     - _prefix:
         type: string
         default:
-    - _default:
-        depends: [ root ]
-        type: object
-        items:
-          - type: *type
-          - kind: *kind
-          - restricted: *restricted
-  any:
+
+  _default:
+    mandatory:
+    depends: [ root ]
+    items:
+      - type: *type
+      - kind: *kind
+      - restricted: *restricted
+
+  any: # attributes of any node type
     - displayName:
         type: string
     - format:
@@ -50,9 +57,9 @@ keys:
     - optional:
         type: boolean
         default: true
-  data:
+
+  data: # attributes for nodes of type "data"
     - multi:
         type: boolean
         depends: [ any ]
         default: false
-

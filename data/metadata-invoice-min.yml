@@ -1,0 +1,44 @@
+# ===
+# Metadata field definitions of invoices
+# [TODO] Define the gobal settings _dataPrefix and _csvPrefix correctly
+# ===
+
+
+# Globals
+_prefix: cdev_invoice_
+
+# Defaults
+_default:
+  # string, long, double, date, boolean
+  type: string
+  # inherited, notInherited, builtIn
+  kind: notInherited
+
+# Invoice Record Header
+number:
+  displayName: 'Rechnungsnummer'
+date:
+  displayName: 'Rechnungsdatum'
+  type: date
+is_credit_note:
+  displayName: 'Ist eine Gutschrift'
+  type: boolean
+# Invoice Item List
+item_list:
+  displayName: 'Positionen'
+  list:
+    number:
+      displayName: 'Position'
+    quantity:
+      displayName: 'Menge'
+      type: double
+    order_date:
+      displayName: 'Bestelldatum'
+      type: date
+    net_price:
+      displayName: 'Einzelpreis netto'
+      type: double
+# Invoice Totals
+total_net_amount:
+  displayName: 'Summe Nettobetrag'
+  type: double
